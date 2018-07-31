@@ -8,13 +8,13 @@ body {
 
 .root {
 	margin: 0 auto;
-	max-width: 2000px;
+	max-width: 1000px;
 /*	background-color: aqua;*/
 }
 
 .title {
 	color: #000000;
-	font-size: 48px;
+	font-size: 24px;
 	font-weight: 400;
 }
 
@@ -27,14 +27,14 @@ body {
 /*правый*/
 .order-menu {
 	position: relative;
-	padding: 70px;
+	padding: 35px;
 }
 .order-menu:before {
     content: "";
     position: absolute;
     left: 0;
-    height: 450px;
-    border-left: 7px dotted red;
+    height: 225px;
+    border-left: 4px dotted red;
 }
 
 .menu {
@@ -44,18 +44,18 @@ body {
 .menu-item {
 	list-style-type: none;
 	color: #000000;
-	font-size: 36px;
+	font-size: 18px;
 	font-weight: 400;
-	line-height: 80px;
+	line-height: 40px;
 }
 
 .order-button {
-	width: 320px;
-	height: 110px;
+	width: 160px;
+	height: 55px;
 	color: #ffffff;
-	font-size: 44px;
+	font-size: 22px;
 	font-weight: 400;
 	background-color: #dc7300;
-	border-radius: 12px;
+	border-radius: 6px;
 	border-style: none;
 }
