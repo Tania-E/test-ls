@@ -11,7 +11,17 @@ body {
 	background-color: lavender;
 }
 
-.title {
+/*левый*/
+.order {
+	display: flex;
+	Justify-content: space-between;
+}
+
+.order-list{
+	flex-flow: 2;
+}
+
+.order-title {
 	position: relative;
 	color: #000000;
 	font-size: 24px;
@@ -19,27 +29,18 @@ body {
 	padding: 0 0 0 35px;
 }
 
-.title-line {
-	position: absolute;
-	width: 62%;
-	border: 2px solid #f1b16b;
-
+.order-table {
+	border-top: 4px solid #f1b16b;
+	width: 100%;
 }
-
-/*левый*/
-
-.order {
-	display: flex;
-	Justify-content: space-between;
-}
-
 
 /*правый*/
-
 .order-menu {
 	position: relative;
 	padding: 35px;
+	flex-flow: 1;
 }
+
 .order-menu:before {
 	content: "";
 	position: absolute;
@@ -57,7 +58,10 @@ body {
 	color: #000000;
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 40px;
+	line-height: 19px;
+	display: inline-block;
+	border-bottom: 1px dotted #c5c5c5;
+	padding: 13px 0 0 0;
 }
 
 .order-button {
