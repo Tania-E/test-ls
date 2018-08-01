@@ -18,7 +18,7 @@ body {
 }
 
 .order-list{
-	flex-flow: 2;
+	flex-grow: 2;
 }
 
 .order-title {
@@ -38,7 +38,7 @@ body {
 .order-menu {
 	position: relative;
 	padding: 35px;
-	flex-flow: 1;
+	flex-grow: 1;
 }
 
 .order-menu:before {
@@ -59,10 +59,17 @@ body {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 19px;
-	display: inline-block;
 	border-bottom: 1px dotted #c5c5c5;
 	padding: 13px 0 0 0;
+	display: block;
 }
+/*
+
+.menu-item:after {
+    content: "";
+    clear: both;
+}
+*/
 
 .order-button {
 	width: 160px;
