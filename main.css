@@ -14,7 +14,6 @@ body {
 .root {
 	margin: 0 auto;
 	max-width: 1000px;
-	/*	background-color: lavender;*/
 	position: relative;
 }
 
@@ -64,6 +63,9 @@ td:nth-child(1) {
 	padding-left: 31px;
 }
 
+td:nth-child(1) {
+	padding: 0 34px 0 31px;
+}
 th {
 	opacity: 0.4;
 	color: #000000;
@@ -79,12 +81,35 @@ td {
 	height: 48px;
 }
 
+.order-table-select {
+	width: 100px;
+}
+
+.order-table-input {
+	width: 25px;
+}
+
 .order-list-add {
 	color: #f26c4f;
 	font-size: 16px;
 	font-weight: 400;
-/*	line-height: 108.92px;*/
+	line-height: 23px;
+	margin: 0 auto;
+	display: inline-block;
+	border-bottom: 1px dotted #f26c4f;
 }
+
+.order-table-input {
+	height: 20px;
+	width: 20px;
+}
+
+
+
+
+
+
+
 
 /*правый*/
 .order-menu {
