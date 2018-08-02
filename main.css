@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 img {
-position:absolute;
-opacity:0.3;
-z-index:-1
+	position: absolute;
+	opacity: 0.3;
+	z-index: -1
 }
-
-
-
-
 
 body {
 	margin: 0;
@@ -18,12 +14,12 @@ body {
 .root {
 	margin: 0 auto;
 	max-width: 1000px;
-/*	background-color: lavender;*/
+	/*	background-color: lavender;*/
 	position: relative;
 }
 
-/*левый*/
 
+/*левый*/
 .order {
 	display: flex;
 	Justify-content: space-between;
@@ -31,14 +27,15 @@ body {
 
 .order-list {
 	position: relative;
-	flex-grow: 9;
+	flex-grow: 5;
 	padding-right: 34px;
 }
+
 .order-list:after {
 	content: "";
 	position: absolute;
 	top: 22px;
-	right: -2px;
+	right: 0px;
 	height: 90%;
 	border-left: 3px dotted red;
 }
@@ -57,14 +54,14 @@ body {
 	width: 100%;
 }
 
-td:nth-child(1),
-th:nth-child(1) {
-	padding-left: 31px;
-}
-
 th,
 td {
 	text-align: left;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+	padding-left: 31px;
 }
 
 th {
@@ -72,17 +69,26 @@ th {
 	color: #000000;
 	font-size: 12px;
 	font-weight: 400;
-	line-height: 64px;
+	line-height: 46px;
+    padding-top: 10px;
 }
 
 td {
 	font-size: 18px;
-	border: 1px colid gray;
+/*	border: 1px solid gray; */
+	height: 48px;
+}
+
+.order-list-add {
+	color: #f26c4f;
+	font-size: 16px;
+	font-weight: 400;
+/*	line-height: 108.92px;*/
 }
 
 /*правый*/
 .order-menu {
-	padding: 30px 30px 0px 39px;
+	padding: 30px 0 0px 39px;
 	flex-grow: 1;
 }
 

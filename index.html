@@ -11,28 +11,34 @@
 	<div class="root">
 
 		<img src="web-tech-ua-9.png" alt="">
+
 		<form action="" class="order">
-
-
 			<div class="order-list">
 				<h2 class="order-title">Выбраны 4 оттенка</h2>
-
 				<table class="order-table">
 					<tr>
 						<th>Цвет</th>
-						<th>V</th>
+						<th><input type="checkbox" name="option2" value="a2"></th>
 						<th>Оттенок</th>
 						<th>Объем</th>
 						<th>Упаковка</th>
 						<th>Х</th>
 					</tr>
 					<tr>
-						<td>Синий</td><td>V</td><td>Небесный</td><td>1 л</td><td>банка</td><td>Х</td>
+						<td>Синий</td>
+						<td><input type="checkbox" name="option2" value="a2"></td>
+						<td>
+							<select id='select'>
+								<option value=""></option>
+							</select>
+						</td>
+						<td>1 л</td>
+						<td>банка</td>
+						<td class="td-symbol">×</td>
 					</tr>
 				</table>
+				<div class="order-list-add">+ Добавить оттенок</div>
 			</div>
-
-
 
 
 			<div class="order-menu">
@@ -43,11 +49,9 @@
 				</menu>
 				<button class="order-button">Отправить</button>
 			</div>
-
-
 		</form>
 	</div>
-	<script src="data.js"></script>
+<!--	<script src="data.js"></script>-->
 	<script src="main.js"></script>
 </body>
 
