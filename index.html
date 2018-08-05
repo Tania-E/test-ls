@@ -10,7 +10,7 @@
 <body>
 	<div class="root">
 
-		<img src="web-tech-ua-9.png" alt="">
+<!--		<img src="web-tech-ua-9.png" alt="">-->
 
 		<form action="" class="order">
 			<div class="order-list">
@@ -18,15 +18,25 @@
 				<table class="order-table">
 					<tr>
 						<th>Цвет</th>
-						<th><input type="checkbox" name="" value="" class="order-table-input"></th>
+						<th>
+							<label>
+								<input type='checkbox'>
+								<span></span>
+							</label>
+						</th>
 						<th>Оттенок</th>
 						<th>Объем</th>
 						<th>Упаковка</th>
-						<th>Х</th>
+						<th class="td-symbol">×</th>
 					</tr>
 					<tr>
 						<td>Синий</td>
-						<td><input type="checkbox" name="" value="" class="order-table-input"></td>
+						<td>
+							<label>
+								<input type='checkbox'>
+								<span></span>
+							</label>
+						</td>
 						<td>
 							<select class="order-table-select" id='select'>
 								<option value=""></option>
@@ -37,7 +47,7 @@
 						<td class="td-symbol">×</td>
 					</tr>
 				</table>
-				<div class="order-list-add">+ Добавить оттенок</div>
+				<div class="order-list-add"><p class="order-list-add-text">+ Добавить оттенок</p></div>
 			</div>
 
 
