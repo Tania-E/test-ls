@@ -1,5 +1,5 @@
 var colors = ['Небесный', 'Голубой', 'Глубокий', 'Королевский', 'Васильково-синий', 'Бирюзовый'];
-var counter = document.querySelectorAll("input[type='checkbox']:checked").length;
+var counter = document.querySelectorAll("name='check':checked").length;
 var h2 = document.getElementsByClassName('order-title')[0];
 var color = '';
 changing();
@@ -28,7 +28,7 @@ addElement.addEventListener('click', function () {
 		<td class="order-table-color"><p class="order-table-color-text"></p></td>
 		<td>
 			<label>
-				<input type='checkbox' checked class="checkbox-input">
+				<input type='checkbox' checked class="checkbox-input" name="check">
 				<span class="checkbox-span"></span>
 			</label>
 		</td>
@@ -46,9 +46,9 @@ table.addEventListener('click', function (event) {
 	var target = event.target;
 	if (target.tagName != 'P') return;
 	if (target.id === 'topDelete') {
-		debugger;
 		var allTr = document.getElementsByTagName('Tr');
-		for (var i = 1; i < allTr.length; i++) {
+		//		trLength = allTr.length;
+		for (var i = allTr.length - 1; i > 0; i--) {
 			allTr[i].remove();
 		}
 	} else {
