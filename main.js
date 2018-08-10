@@ -6,18 +6,14 @@ changing();
 h2.innerHTML = `Выбраны ${counter} ${color}`;
 
 function drawSelect(colors) {
-//	debugger;
 	var select = document.getElementsByClassName('order-table-select');
-	var clear = document.getElementsByTagName('option');
-	for (var a = 0; a < clear.length; a++) {
-		clear[a].remove();
-	}
 	for (var i = 0; i < select.length; i++) {
-
-		for (var j = 0; j < colors.length; j++) {
-			var newOption = document.createElement('option');
-			newOption.innerHTML = colors[j];
-			select[i].appendChild(newOption);
+		if (i === (select.length - 1)) {
+			for (var j = 0; j < colors.length; j++) {
+				var newOption = document.createElement('option');
+				newOption.innerHTML = colors[j];
+				select[i].appendChild(newOption);
+			}
 		}
 	}
 }
@@ -37,7 +33,7 @@ addElement.addEventListener('click', function () {
 			</label>
 		</td>
 		<td>
-			<select class="order-table-select" id='select'>
+			<select class="order-table-select">
 			</select>
 		</td>
 		<td><input type="number" id='' placeholder='' class="order-table-input" value="1"> л</td>
@@ -97,6 +93,23 @@ function changing() {
 	}
 }
 
+var checkAll = document.getElementById('topCeckbox');
+checkAll.addEventListener('click', function () {
+	var allInputs = document.getElementsByTagName("input");
+	if (checkAll.checked === true) {
+		for (var i = 0, max = allInputs.length; i < max; i++) {
+			if (allInputs[i].type === 'checkbox') {
+				allInputs[i].checked = true;
+			}
+		}
+	} else {
+		for (var i = 0, max = allInputs.length; i < max; i++) {
+			if (allInputs[i].type === 'checkbox') {
+				allInputs[i].checked = false;
+			}
+		}
+	}
+});
 
 //onclick = function(event) {
 //	event.target.style.backgroundColor = 'yellow';
