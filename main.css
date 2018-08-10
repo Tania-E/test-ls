@@ -122,13 +122,17 @@ td {
 	margin: 0;
 	display: inline-block;
 }
+.order-table-color-text:hover {
+	color: #f1a552;
+	border-bottom: 1px dotted #f1a552;
+}
 
-label input {
+.checkbox-input {
 	display: none;
 	/* <--скрываем дефолтный чекбокс */
 }
 
-label span {
+.checkbox-span {
 	/* <-- стилизируем новый */
 	height: 10px;
 	width: 10px;
@@ -157,6 +161,7 @@ label span {
 	border-radius: 4px;
 	border: 2px solid #d7d7d7;
 	height: 31px;
+	padding-left: 5px;
 }
 
 select {
@@ -183,6 +188,7 @@ select::-ms-expand {
 	width: 50px;
 	border: 2px solid #d7d7d7;
 	border-radius: 3px;
+	text-align: center;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -217,6 +223,10 @@ input[type=number]::-webkit-outer-spin-button {
 .order-list-add-text {
 	border-bottom: 1px dotted #f26c4f;
 	display: inline-block;
+}
+
+.order-list-add-text:hover {
+	cursor: pointer;
 }
 
 /*правый*/
@@ -260,7 +270,10 @@ input[type=number]::-webkit-outer-spin-button {
 	padding: 13px 0 0 0;
 	text-decoration: none;
 }
-
+.menu-item-text:hover {
+	color: #f1a552;
+	border-bottom: 1px dotted #f1a552;
+}
 .order-button {
 	width: 160px;
 	height: 55px;
@@ -271,3 +284,14 @@ input[type=number]::-webkit-outer-spin-button {
 	border-radius: 6px;
 	border-style: none;
 }
+
+.order-button:hover {
+	-webkit-box-shadow: 5px 5px 23px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 23px -8px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 23px -8px rgba(0,0,0,0.75);
+	background-color: #ef9a3e;
+}
+span {
+
+}
+

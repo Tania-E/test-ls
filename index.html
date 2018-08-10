@@ -9,47 +9,43 @@
 
 <body>
 	<div class="root">
-
-		<img src="web-tech-ua-9.png" alt="">
-
+<!--		<img src="web-tech-ua-9.png" alt="">-->
 		<form action="" class="order">
 			<div class="order-list">
-				<h2 class="order-title">Выбраны 4 оттенка</h2>
-				<table class="order-table">
+				<h2 class="order-title"></h2>
+				<table class="order-table" id="table">
 					<tr>
 						<th>Цвет</th>
 						<th>
 							<label>
-								<input type='checkbox'>
-								<span></span>
+								<input type='checkbox' class="checkbox-input" id="topCeckbox">
+								<span class="checkbox-span"></span>
 							</label>
 						</th>
 						<th>Оттенок</th>
 						<th>Объем</th>
 						<th>Упаковка</th>
-						<th class="order-table-delete"><p class="td-delete"></p></th>
+						<th class="order-table-delete"><p class="td-delete" id="topDelete"></p></th>
 					</tr>
+
 					<tr>
 						<td class="order-table-color"><p class="order-table-color-text">Синий</p></td>
 						<td>
 							<label>
-								<input type='checkbox'>
-								<span></span>
+								<input type='checkbox' checked class="checkbox-input">
+								<span class="checkbox-span"></span>
 							</label>
 						</td>
 						<td>
-							<select class="order-table-select" id='select'>
-								<option value=""></option>
-							</select>
+							<select class="order-table-select" id='select'></select>
 						</td>
-						<td><input type="number" id='' placeholder='' class="order-table-input"> л</td>
+						<td><input type="number" id='' placeholder='' class="order-table-input" value="1"> л</td>
 						<td>банка</td>
 						<td class="order-table-delete"><p class="td-delete"></p></td>
 					</tr>
 				</table>
-				<div class="order-list-add"><p class="order-list-add-text">+ Добавить оттенок</p></div>
+				<div class="order-list-add"><p class="order-list-add-text" id="add">+ Добавить оттенок</p></div>
 			</div>
-
 
 			<div class="order-menu">
 				<menu class="menu">
