@@ -33,38 +33,29 @@ addElement.addEventListener('click', function () {
 			</label>
 		</td>
 		<td>
-			<select class="order-table-select">
-			</select>
+			<select class="order-table-select"></select>
 		</td>
 		<td><input type="number" id='' placeholder='' class="order-table-input" value="1"> л</td>
 		<td>банка</td>
 		<td class="order-table-delete"><p class="td-delete"></p></td>`;
 	table.appendChild(newTr);
 	drawSelect(colors);
-	//	counter++;
-	//	console.log(counter);
 });
 
-//1) вариант
-//table.onclick = function (event) {
-//	var target = event.target;
-//	if (target.tagName != 'P') return;
-//	target = target.parentNode;
-//	target = target.parentNode;
-//	target.parentNode.removeChild(target);
-//	counter--;
-//	console.log(counter);
-//};
-
-//2) вариант
 table.addEventListener('click', function (event) {
 	var target = event.target;
 	if (target.tagName != 'P') return;
-	target = target.parentNode;
-	target = target.parentNode;
-	target.parentNode.removeChild(target);
-	//	counter--;
-	//	console.log(counter);
+	if (target.id === 'topDelete') {
+		debugger;
+		var allTr = document.getElementsByTagName('Tr');
+		for (var i = 1; i < allTr.length; i++) {
+			allTr[i].remove();
+		}
+	} else {
+		target = target.parentNode;
+		target = target.parentNode;
+		target.parentNode.removeChild(target);
+	}
 });
 
 window.onload = function () {
@@ -73,8 +64,7 @@ window.onload = function () {
 		console.log(counter);
 		changing();
 		h2.innerHTML = `Выбраны ${counter} ${color}`;
-
-	};
+	}
 }
 
 function changing() {
@@ -95,23 +85,18 @@ function changing() {
 
 var checkAll = document.getElementById('topCeckbox');
 checkAll.addEventListener('click', function () {
-	var allInputs = document.getElementsByTagName("input");
+	var allInputs = document.getElementsByTagName('input');
 	if (checkAll.checked === true) {
-		for (var i = 0, max = allInputs.length; i < max; i++) {
+		for (var i = 0; i < allInputs.length; i++) {
 			if (allInputs[i].type === 'checkbox') {
 				allInputs[i].checked = true;
 			}
 		}
 	} else {
-		for (var i = 0, max = allInputs.length; i < max; i++) {
+		for (var i = 0; i < allInputs.length; i++) {
 			if (allInputs[i].type === 'checkbox') {
 				allInputs[i].checked = false;
 			}
 		}
 	}
 });
-
-//onclick = function(event) {
-//	event.target.style.backgroundColor = 'yellow';
-//	console.log(event);
-//};
