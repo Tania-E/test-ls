@@ -1,5 +1,5 @@
 var colors = ['Небесный', 'Голубой', 'Глубокий', 'Королевский', 'Васильково-синий', 'Бирюзовый'];
-var counter = document.querySelectorAll("name='check':checked").length;
+var counter = document.querySelectorAll("input[name='check']:checked").length;
 var h2 = document.getElementsByClassName('order-title')[0];
 var color = '';
 changing();
