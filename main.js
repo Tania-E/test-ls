@@ -60,7 +60,7 @@ table.addEventListener('click', function (event) {
 
 window.onload = function () {
 	document.getElementsByClassName('order-list')[0].onclick = function () {
-		counter = document.querySelectorAll("input[type='checkbox']:checked").length;
+		counter = document.querySelectorAll("input[name='check']:checked").length;
 		console.log(counter);
 		changing();
 		h2.innerHTML = `Выбраны ${counter} ${color}`;
