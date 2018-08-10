@@ -47,7 +47,6 @@ table.addEventListener('click', function (event) {
 	if (target.tagName != 'P') return;
 	if (target.id === 'topDelete') {
 		var allTr = document.getElementsByTagName('Tr');
-		//		trLength = allTr.length;
 		for (var i = allTr.length - 1; i > 0; i--) {
 			allTr[i].remove();
 		}
