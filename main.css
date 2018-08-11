@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-img {
-	position: absolute;
-	opacity: 0.3;
-	z-index: -1
-}
-
 body {
 	margin: 0;
 	font-family: Roboto, sans-serif;
@@ -49,8 +43,47 @@ body {
 	margin: 0;
 }
 
+.order-title:after {
+	content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 4px solid #f1b16b;
+}
+
+.color-block {
+	display: flex;
+}
+
+.order-color-common {
+	padding-left: 34px;
+	width: 42.4%;
+}
+
+.order-color-title {
+	opacity: 0.4;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 46px;
+    padding-top: 15px;
+}
+
+.order-color-name {
+	font-size: 18px;
+	border-bottom: 1px dotted #c5c5c5;
+	margin: 0;
+	display: inline-block;
+	padding-top: 18px;
+}
+
+.order-color-name:hover {
+	color: #f1a552;
+	border-bottom: 1px dotted #f1a552;
+}
+
 .order-table {
-	border-top: 4px solid #f1b16b;
 	width: 100%;
 }
 
@@ -62,36 +95,32 @@ td {
 	vertical-align: middle;
 }
 
+
+
 th:nth-child(1),
 td:nth-child(1) {
-	padding-left: 31px;
-	width: 33.4%;
-}
-
-th:nth-child(2),
-td:nth-child(2) {
 	opacity: 1;
 	width: 4.6%;
 }
 
+th:nth-child(2),
+td:nth-child(2) {
+	width: 35%;
+}
+
 th:nth-child(3),
 td:nth-child(3) {
-	width: 33%;
+	width: 9.3%;
+	white-space: nowrap;
 }
 
 th:nth-child(4),
 td:nth-child(4) {
-	width: 13.3%;
-	white-space: nowrap;
+	width: 14.7%;
 }
 
 th:nth-child(5),
 td:nth-child(5) {
-	width: 12.7%;
-}
-
-th:nth-child(6),
-td:nth-child(6) {
 	width: 3%;
 	padding: 0 0 7px 5px;
 }
@@ -101,29 +130,13 @@ th {
 	color: #000000;
 	font-size: 12px;
 	font-weight: 400;
-	line-height: 46px;
-	padding-top: 11px;
+	line-height: 68px;
 }
 
 td {
 	font-size: 16px;
 	height: 48px;
 	padding-left: 5px;
-}
-
-.order-table-color {
-	font-size: 18px;
-}
-
-.order-table-color-text {
-	border-bottom: 1px dotted #c5c5c5;
-	margin: 0;
-	display: inline-block;
-}
-
-.order-table-color-text:hover {
-	color: #f1a552;
-	border-bottom: 1px dotted #f1a552;
 }
 
 .checkbox-input {
@@ -160,7 +173,7 @@ td {
 
 .order-table-select {
 	font-size: 16px;
-	width: 92%;
+	width: 94%;
 	border-radius: 4px;
 	border: 2px solid #d7d7d7;
 	height: 31px;
@@ -183,7 +196,7 @@ select {
 	background-image: url(select.png);
 	background-position: 95%, 100%;
 	background-repeat: no-repeat;
-	background-size: 5%;
+	background-size: 10px;
 
 	-moz-appearance: none;
 	text-indent: 0.01px;
@@ -203,6 +216,7 @@ select::-ms-expand {
 	border: 2px solid #d7d7d7;
 	border-radius: 3px;
 	text-align: center;
+/*	margin-left: 10px*/
 }
 
 input[type=number]::-webkit-inner-spin-button,

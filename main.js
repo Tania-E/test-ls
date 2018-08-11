@@ -29,7 +29,6 @@ var table = document.getElementById('table');
 addElement.addEventListener('click', function () {
 	var newTr = document.createElement('tr');
 	newTr.innerHTML = `
-		<td class="order-table-color"><p class="order-table-color-text"></p></td>
 		<td>
 			<label>
 				<input type='checkbox' checked class="checkbox-input" name="check">
@@ -67,6 +66,9 @@ window.onload = function () {
 		checkAll = document.getElementById('topCheckbox');
 		counter = document.querySelectorAll("input[name='check']:checked").length;
 		checkAll.checked = (counter === checkboxes.length);
+		if ( checkboxes.length === 0 ) {
+			checkAll.checked = false;
+		}
 		changing();
 		h2.innerHTML = `Выбраны ${counter} ${color}`;
 	}
