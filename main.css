@@ -74,7 +74,7 @@ body {
 	border-bottom: 1px dotted #c5c5c5;
 	margin: 0;
 	display: inline-block;
-	padding-top: 18px;
+	padding-top: 24px;
 }
 
 .order-color-name:hover {
@@ -248,12 +248,14 @@ input[type=number]::-webkit-outer-spin-button {
 	font-weight: 400;
 	line-height: 23px;
 	margin: 0 auto;
-	text-align: center;
+	text-align: left;
+	padding-left: 42px;
 }
 
 .order-list-add-text {
 	border-bottom: 1px dotted #f26c4f;
 	display: inline-block;
+	margin-top: 10px;
 }
 
 .order-list-add-text:hover {
@@ -348,7 +350,6 @@ input[type=number]::-webkit-outer-spin-button {
 	}
 	.order-list-add {
 		text-align: left;
-		padding-left: 28%;
 	}
 }
 
@@ -360,9 +361,8 @@ input[type=number]::-webkit-outer-spin-button {
 		display: none;
 	}
 	.order-menu {
-
 		margin: 0;
-		padding-left: 30%;
+		padding-left: 26%;
 	}
 	.order-list:after {
 		border-left: none;
