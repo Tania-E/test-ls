@@ -4,8 +4,9 @@ var counter = document.querySelectorAll("input[name='check']:checked").length;
 var checkboxes = document.querySelectorAll("input[name='check']");
 var checkAll = document.getElementById('topCheckbox');
 var color = '';
+var text = 'Выбран';
 changing();
-h2.innerHTML = `Выбраны ${counter} ${color}`;
+h2.innerHTML = `${text} ${counter} ${color}`;
 
 checkAll.checked = (counter === checkboxes.length);
 
@@ -70,7 +71,7 @@ window.onload = function () {
 			checkAll.checked = false;
 		}
 		changing();
-		h2.innerHTML = `Выбраны ${counter} ${color}`;
+		h2.innerHTML = `${text} ${counter} ${color}`;
 	}
 }
 
@@ -78,14 +79,18 @@ function changing() {
 	var i = counter;
 	if ((i > 10) && (i < 20)) {
 		color = 'оттенков';
+		text = 'Выбраны'
 	} else {
 		i = counter % 10;
 		if (i === 1) {
 			color = 'оттенок';
+			text = 'Выбран'
 		} else if ((i === 2) || (i === 3) || (i === 4)) {
 			color = 'оттенка';
+			text = 'Выбраны'
 		} else {
 			color = 'оттенков';
+			text = 'Выбраны'
 		}
 	}
 }
