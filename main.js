@@ -7,9 +7,9 @@ var color = '';
 var text = 'Выбран';
 changing();
 h2.innerHTML = `${text} ${counter} ${color}`;
-
 checkAll.checked = (counter === checkboxes.length);
 
+//Добавляем цвета в селект
 function drawSelect(colors) {
 	var select = document.getElementsByClassName('order-table-select');
 	for (var i = 0; i < select.length; i++) {
@@ -27,6 +27,7 @@ drawSelect(colors);
 var addElement = document.getElementById('add');
 var table = document.getElementById('table');
 
+//Добавляем новую строку в таблицу
 addElement.addEventListener('click', function () {
 	var newTr = document.createElement('tr');
 	newTr.innerHTML = `
@@ -46,6 +47,7 @@ addElement.addEventListener('click', function () {
 	drawSelect(colors);
 });
 
+//Удаляем строку из таблицы
 table.addEventListener('click', function (event) {
 	var target = event.target;
 	if (target.className != 'td-delete') return;
@@ -61,6 +63,7 @@ table.addEventListener('click', function (event) {
 	}
 });
 
+//Считаем и показывает количество выделнных оттенков
 window.onload = function () {
 	document.getElementsByClassName('order-list')[0].onclick = function () {
 		checkboxes = document.querySelectorAll("input[name='check']");
@@ -75,6 +78,7 @@ window.onload = function () {
 	}
 }
 
+//Склоняем слова
 function changing() {
 	var i = counter;
 	if ((i > 10) && (i < 20)) {
@@ -95,6 +99,7 @@ function changing() {
 	}
 }
 
+//Управляем общим чекбоксом
 var checkAll = document.getElementById('topCheckbox');
 checkAll.addEventListener('click', function () {
 	var allInputs = document.getElementsByTagName('input');
