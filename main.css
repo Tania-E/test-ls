@@ -158,7 +158,7 @@ td {
 
 [type=checkbox]:checked + span:before {
 	content: '';
-	background-image: url(checked.png);
+	background-image: url(img/checked.png);
 	width: 12px;
 	height: 12px;
 	position: absolute;
@@ -190,7 +190,7 @@ td {
 
 select {
 	-webkit-appearance: none;
-	background-image: url(select.png);
+	background-image: url(img/select.png);
 	background-position: 95%, 100%;
 	background-repeat: no-repeat;
 	background-size: 10px;
@@ -228,7 +228,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .td-delete {
-	background-image: url(delete.png);
+	background-image: url(img/delete.png);
 	width: 12px;
 	height: 12px;
 	position: absolute;
@@ -239,7 +239,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .td-delete:hover {
 	cursor: pointer;
-	background-image: url(delete-hover.png);
+	background-image: url(img/delete-hover.png);
 }
 
 .order-list-add {
@@ -287,7 +287,7 @@ input[type=number]::-webkit-outer-spin-button {
 .menu-item:first-child:before {
 	content: "";
 	position: absolute;
-	background-image: url(menu-check.png);
+	background-image: url(img/menu-check.png);
 	width: 12px;
 	height: 12px;
 	background-size: contain;
