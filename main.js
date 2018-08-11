@@ -39,7 +39,7 @@ addElement.addEventListener('click', function () {
 		<td>
 			<select class="order-table-select"></select>
 		</td>
-		<td><input type="number" id='' placeholder='' class="order-table-input" value="1"> л</td>
+		<td><input type="number" pattern="[0-9]*" class="order-table-input" value="1"> л</td>
 		<td>банка</td>
 		<td class="order-table-delete"><p class="td-delete"></p></td>`;
 	table.appendChild(newTr);
@@ -48,7 +48,7 @@ addElement.addEventListener('click', function () {
 
 table.addEventListener('click', function (event) {
 	var target = event.target;
-	if (target.tagName != 'P') return;
+	if (target.className != 'td-delete') return;
 	if (target.id === 'topDelete') {
 		var allTr = document.getElementsByTagName('Tr');
 		for (var i = allTr.length - 1; i > 0; i--) {
