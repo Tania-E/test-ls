@@ -1,9 +1,13 @@
 var colors = ['Небесный', 'Голубой', 'Глубокий', 'Королевский', 'Васильково-синий', 'Бирюзовый'];
-var counter = document.querySelectorAll("input[name='check']:checked").length;
 var h2 = document.getElementsByClassName('order-title')[0];
+var counter = document.querySelectorAll("input[name='check']:checked").length;
+var checkboxes = document.querySelectorAll("input[name='check']");
+var checkAll = document.getElementById('topCheckbox');
 var color = '';
 changing();
 h2.innerHTML = `Выбраны ${counter} ${color}`;
+
+checkAll.checked = (counter === checkboxes.length);
 
 function drawSelect(colors) {
 	var select = document.getElementsByClassName('order-table-select');
@@ -59,8 +63,10 @@ table.addEventListener('click', function (event) {
 
 window.onload = function () {
 	document.getElementsByClassName('order-list')[0].onclick = function () {
+		checkboxes = document.querySelectorAll("input[name='check']");
+		checkAll = document.getElementById('topCheckbox');
 		counter = document.querySelectorAll("input[name='check']:checked").length;
-		console.log(counter);
+		checkAll.checked = (counter === checkboxes.length);
 		changing();
 		h2.innerHTML = `Выбраны ${counter} ${color}`;
 	}
@@ -82,7 +88,7 @@ function changing() {
 	}
 }
 
-var checkAll = document.getElementById('topCeckbox');
+var checkAll = document.getElementById('topCheckbox');
 checkAll.addEventListener('click', function () {
 	var allInputs = document.getElementsByTagName('input');
 	if (checkAll.checked === true) {
